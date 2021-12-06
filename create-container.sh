@@ -1,8 +1,7 @@
 #!/bin/bash
 
-docker container rm jupyter-swipl
-
 docker run \
+	--rm \
 	-p 8888:8888 \
 	-v $(pwd)/notebooks:/notebooks \
 	-v $(pwd)/kernels:/usr/local/share/jupyter/kernels/jswipl \
